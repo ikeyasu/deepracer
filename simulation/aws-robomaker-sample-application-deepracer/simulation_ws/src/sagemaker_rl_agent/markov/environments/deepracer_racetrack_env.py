@@ -133,7 +133,8 @@ class DeepRacerRacetrackEnv(gym.Env):
                                       ':simulation-job/' + rospy.get_param('AWS_ROBOMAKER_SIMULATION_JOB_ID')
 
             if self.job_type == TRAINING_JOB:
-                from custom_files.customer_reward_function import reward_function
+                #from custom_files.customer_reward_function import reward_function
+                from markov.defaults import reward_function
                 self.reward_function = reward_function
                 self.metric_name = rospy.get_param('METRIC_NAME')
                 self.metric_namespace = rospy.get_param('METRIC_NAMESPACE')
