@@ -13,6 +13,7 @@ setup(
     packages=find_packages(),
     python_requires=REQUIRES_PYTHON,
     install_requires=[
+        'chainerrl==0.7.0',
         'tensorflow==1.11',
         'annoy==1.8.3',
         'Pillow==4.3.0',
